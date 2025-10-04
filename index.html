@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation - receiptアプリケーションカラーパターン</title>
+    <link rel="stylesheet" href="assets/css/theme.css">
+</head>
+<body>
+    <div style="max-width: 800px; margin: 0 auto; padding: 2rem;">
+        <h1>Documentation Application</h1>
+        <p>このアプリケーションは、receiptアプリケーションと統一されたカラーパターンを使用しています。</p>
+        
+        <div class="card" style="margin-bottom: 2rem;">
+            <div class="card-header">
+                <h3 style="margin: 0;">カラーパレット</h3>
+            </div>
+            <div class="card-body">
+                <p>以下は定義されているカラーパレットの例です：</p>
+                
+                <h3>ボタンのバリエーション</h3>
+                <div style="display: flex; gap: 1rem; margin-bottom: 1.5rem; flex-wrap: wrap;">
+                    <button class="btn-primary">Primary Button</button>
+                    <button class="btn-secondary">Secondary Button</button>
+                    <button class="btn-success">Success Button</button>
+                    <button class="btn-warning">Warning Button</button>
+                    <button class="btn-danger">Danger Button</button>
+                </div>
+                
+                <h3>アラートのバリエーション</h3>
+                <div class="alert-info" style="margin-bottom: 1rem;">
+                    <strong>情報:</strong> これは情報メッセージです。プライマリカラーが使用されています。
+                </div>
+                
+                <div class="alert-success" style="margin-bottom: 1rem;">
+                    <strong>成功:</strong> 操作が正常に完了しました。グリーン系のカラーが使用されています。
+                </div>
+                
+                <div class="alert-warning" style="margin-bottom: 1rem;">
+                    <strong>警告:</strong> 注意が必要です。オレンジ系のカラーが使用されています。
+                </div>
+                
+                <div class="alert-error" style="margin-bottom: 1rem;">
+                    <strong>エラー:</strong> エラーが発生しました。レッド系のカラーが使用されています。
+                </div>
+                
+                <h3>フォーム要素</h3>
+                <div style="margin-bottom: 1rem;">
+                    <label class="form-label" for="sample-input">サンプル入力フィールド</label>
+                    <input type="text" id="sample-input" class="form-input" placeholder="テキストを入力してください">
+                </div>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-header">
+                <h3 style="margin: 0;">使用方法</h3>
+            </div>
+            <div class="card-body">
+                <p>このCSSファイルをプロジェクトに追加することで、receiptアプリケーションと統一されたデザインを使用できます。</p>
+                
+                <h3>CSS変数の利用</h3>
+                <p>カスタムCSS変数を使用してカラーを参照できます：</p>
+                <ul>
+                    <li><code>var(--color-primary-600)</code> - メインのプライマリカラー</li>
+                    <li><code>var(--color-secondary-600)</code> - 成功状態のカラー</li>
+                    <li><code>var(--color-accent-500)</code> - 警告用のカラー</li>
+                    <li><code>var(--color-error-600)</code> - エラー用のカラー</li>
+                    <li><code>var(--color-neutral-700)</code> - テキストカラー</li>
+                </ul>
+                
+                <h3>定義済みクラス</h3>
+                <p>事前に定義されたクラスを使用して、一貫したスタイリングを適用できます：</p>
+                <ul>
+                    <li><code>.btn-primary</code>, <code>.btn-secondary</code>, <code>.btn-success</code>, <code>.btn-warning</code>, <code>.btn-danger</code></li>
+                    <li><code>.alert-info</code>, <code>.alert-success</code>, <code>.alert-warning</code>, <code>.alert-error</code></li>
+                    <li><code>.form-input</code>, <code>.form-label</code></li>
+                    <li><code>.card</code>, <code>.card-header</code>, <code>.card-body</code></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
