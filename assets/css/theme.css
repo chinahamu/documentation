@@ -1,0 +1,297 @@
+/* receiptアプリケーションと統一されたカラーパターン */
+
+/* カラーパレットの定義 */
+:root {
+  /* プライマリ: Blue系 - 信頼性と安定性 */
+  --color-primary-50: #eff6ff;
+  --color-primary-100: #dbeafe;
+  --color-primary-200: #bfdbfe;
+  --color-primary-300: #93c5fd;
+  --color-primary-400: #60a5fa;
+  --color-primary-500: #2563eb;
+  --color-primary-600: #1d4ed8;
+  --color-primary-700: #1e40af;
+  --color-primary-800: #1e3a8a;
+  --color-primary-900: #1e293b;
+
+  /* セカンダリ: Green系 - 成功・完了状態 */
+  --color-secondary-50: #ecfdf5;
+  --color-secondary-100: #d1fae5;
+  --color-secondary-200: #a7f3d0;
+  --color-secondary-300: #6ee7b7;
+  --color-secondary-400: #34d399;
+  --color-secondary-500: #059669;
+  --color-secondary-600: #047857;
+  --color-secondary-700: #065f46;
+  --color-secondary-800: #064e3b;
+  --color-secondary-900: #022c22;
+
+  /* アクセント: Orange系 - 警告・注意喚起 */
+  --color-accent-50: #fff7ed;
+  --color-accent-100: #ffedd5;
+  --color-accent-200: #fed7aa;
+  --color-accent-300: #fdba74;
+  --color-accent-400: #fb923c;
+  --color-accent-500: #ea580c;
+  --color-accent-600: #c2410c;
+  --color-accent-700: #9a3412;
+  --color-accent-800: #7c2d12;
+  --color-accent-900: #431407;
+
+  /* ニュートラル: Gray系 - テキストと背景 */
+  --color-neutral-50: #f9fafb;
+  --color-neutral-100: #f3f4f6;
+  --color-neutral-200: #e5e7eb;
+  --color-neutral-300: #d1d5db;
+  --color-neutral-400: #9ca3af;
+  --color-neutral-500: #6b7280;
+  --color-neutral-600: #4b5563;
+  --color-neutral-700: #374151;
+  --color-neutral-800: #1f2937;
+  --color-neutral-900: #111827;
+
+  /* エラー: Red系 - エラー・削除アクション */
+  --color-error-50: #fef2f2;
+  --color-error-100: #fee2e2;
+  --color-error-200: #fecaca;
+  --color-error-300: #fca5a5;
+  --color-error-400: #f87171;
+  --color-error-500: #dc2626;
+  --color-error-600: #b91c1c;
+  --color-error-700: #991b1b;
+  --color-error-800: #7f1d1d;
+  --color-error-900: #450a0a;
+
+  /* タイポグラフィ */
+  --font-size-h1: 2.25rem;
+  --font-size-h2: 1.875rem;
+  --font-size-h3: 1.5rem;
+  --font-size-body: 1rem;
+  --line-height-relaxed: 1.6;
+  --line-height-loose: 1.8;
+
+  /* スペーシング（8px基準） */
+  --spacing-base: 0.5rem; /* 8px */
+  --spacing-sm: 1rem;     /* 16px */
+  --spacing-md: 1.5rem;   /* 24px */
+  --spacing-lg: 2rem;     /* 32px */
+  --spacing-xl: 3rem;     /* 48px */
+  --spacing-2xl: 4rem;    /* 64px */
+}
+
+/* ベーススタイル */
+html {
+  font-family: 'Inter', 'Noto Sans JP', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  font-size: var(--font-size-body);
+  line-height: var(--line-height-relaxed);
+}
+
+body {
+  color: var(--color-neutral-700);
+  background-color: var(--color-neutral-50);
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+  line-height: var(--line-height-relaxed);
+  font-weight: 600;
+  color: var(--color-neutral-800);
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+  line-height: var(--line-height-relaxed);
+  font-weight: 600;
+  color: var(--color-neutral-800);
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+  line-height: var(--line-height-relaxed);
+  font-weight: 600;
+  color: var(--color-neutral-800);
+}
+
+/* ボタンスタイル */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  font-size: 0.75rem;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background-color: var(--color-primary-600);
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-700);
+}
+
+.btn-primary:focus {
+  background-color: var(--color-primary-700);
+  outline: none;
+  box-shadow: 0 0 0 2px var(--color-primary-500);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--color-neutral-300);
+  border-radius: 0.375rem;
+  font-weight: 600;
+  font-size: 0.75rem;
+  color: var(--color-neutral-700);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-neutral-50);
+}
+
+.btn-success {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  font-size: 0.75rem;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background-color: var(--color-secondary-600);
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+}
+
+.btn-success:hover {
+  background-color: var(--color-secondary-700);
+}
+
+.btn-warning {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  font-size: 0.75rem;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background-color: var(--color-accent-500);
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+}
+
+.btn-warning:hover {
+  background-color: var(--color-accent-600);
+}
+
+.btn-danger {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  font-size: 0.75rem;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  background-color: var(--color-error-600);
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+}
+
+.btn-danger:hover {
+  background-color: var(--color-error-500);
+}
+
+/* フォーム要素 */
+.form-input {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid var(--color-neutral-300);
+  border-radius: 0.375rem;
+  font-size: 1rem;
+  background-color: white;
+}
+
+.form-input:focus {
+  border-color: var(--color-primary-500);
+  outline: none;
+  box-shadow: 0 0 0 1px var(--color-primary-500);
+}
+
+.form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-neutral-700);
+  margin-bottom: 0.25rem;
+}
+
+/* カード */
+.card {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+.card-header {
+  padding: 1rem;
+  background-color: var(--color-primary-50);
+  border-bottom: 1px solid var(--color-primary-200);
+}
+
+.card-body {
+  padding: var(--spacing-base);
+}
+
+/* アラート */
+.alert-success {
+  padding: 1rem;
+  border: 1px solid var(--color-secondary-400);
+  border-radius: 0.375rem;
+  background-color: var(--color-secondary-100);
+  color: var(--color-secondary-700);
+}
+
+.alert-error {
+  padding: 1rem;
+  border: 1px solid var(--color-error-400);
+  border-radius: 0.375rem;
+  background-color: var(--color-error-100);
+  color: var(--color-error-700);
+}
+
+.alert-warning {
+  padding: 1rem;
+  border: 1px solid var(--color-accent-400);
+  border-radius: 0.375rem;
+  background-color: var(--color-accent-100);
+  color: var(--color-accent-700);
+}
+
+.alert-info {
+  padding: 1rem;
+  border: 1px solid var(--color-primary-400);
+  border-radius: 0.375rem;
+  background-color: var(--color-primary-100);
+  color: var(--color-primary-700);
+}
